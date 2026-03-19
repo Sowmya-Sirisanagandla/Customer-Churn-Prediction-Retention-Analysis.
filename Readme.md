@@ -1,4 +1,6 @@
 Customer Churn Prediction & Retention Analysis
+This project develops a machine learning model to identify customers at high risk of churn and enable proactive retention strategies. The goal is to minimize revenue loss by detecting potential churners early and supporting data-driven business decisions.
+
 Project Overview:
 
 Customer churn is a critical problem for subscription-based businesses. Losing customers directly affects revenue and growth.
@@ -125,3 +127,25 @@ Random Forest was chosen as the final model due to its improved performance over
 The focus of this project is not just predictive accuracy, but enabling proactive customer retention through reliable churn detection.
 
 -> Model performance was evaluated using accuracy, precision, recall, and ROC-AUC to ensure a balanced and business-relevant assessment. While accuracy provides an overall measure of correctness, it is not sufficient for churn prediction due to potential class imbalance. Precision measures how many predicted churners were actually correct, helping control unnecessary retention efforts. Recall, which was the primary focus, measures how effectively the model identifies actual churners, since missing a churn-prone customer leads to direct revenue loss. ROC-AUC was used to evaluate the model’s ability to distinguish between churn and non-churn across different thresholds. Additionally, the classification threshold was tuned using the precision–recall trade-off to prioritize recall and align the model with business objectives.
+
+## Results
+
+### Logistic Regression
+
+- Accuracy: 75%
+- Precision (Churn): 52%
+- Recall (Churn): 81%
+- ROC-AUC: 0.85
+
+### Random Forest
+
+- Accuracy: 74%
+- Precision (Churn): 50%
+- Recall (Churn): 85%
+- ROC-AUC: 0.84
+
+### Final Model Selection
+
+Random Forest was selected as the final model due to its higher recall, enabling better identification of customers at risk of churn.
+
+The model prioritizes recall over precision to minimize the risk of missing potential churners, aligning with the business goal of proactive customer retention.
